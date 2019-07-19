@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111269768-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111269768-2');
+</script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Visualising Non Communicable Diseases</title>
+        <meta name="deaths by non communicable diseases" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="styles/prototypencds.css">
+
+        <link rel="apple-touch-icon" href="img/favicon.png">
+        <link rel="shortcut icon" href="img/favicon.png">
+        <link rel="mask-icon" href="favicon.svg" color="#0052E7">
+
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script>window.html5 || document.write('<script src="scripts/ncds-data/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+        <h1>Deaths by non communicable diseases<br> in every 100 000 people in 2012.</h1>
+        <button id="info" onclick="openPopUp()">I'm lost!</button>
+        <div id="InteractionPopUp">
+            <div>
+                <img src="img/ncds/interactions-info.png">
+            </div>
+            <div>
+                <p><b>drag around</b> <br>elements to select them.</p>
+                <p><b>click on an element</b> <br>to select or deselect it.</p>
+                <p><b>click on the background</b> <br>to go to a deeper layer.</p>
+                <p><b>double click anywhere</b> <br>to go to the previous layer.</p>
+            </div>
+            <button onclick="closePopUp()">Got it!</button>
+        </div>
+        <!--- Loading JQuery, TweenMax, SnapSVG from local JS directory -->
+        <script src="scripts/vendor/jquery-1.11.2.min.js"></script>
+        <script src="scripts/vendor/TweenMax.js"></script>
+        <script src="scripts/vendor/snap.svg.js"></script>
+
+        <!--- dataset JS file, containing JSON data -->
+        <script src="scripts/ncds-data/NCDdeathsper100000.js"></script>
+        <script src="scripts/ncds-data/CancerDeaths.js"></script>
+        <script src="scripts/ncds-data/CVDDeaths.js"></script>
+        <script src="scripts/ncds-data/DiabetesDeaths.js"></script>
+        <script src="scripts/ncds-data/RespiratoryDiseasesDeaths.js"></script>
+        <script src="scripts/ncds-data/InfrastructureforNCDs.js"></script>
+        <script src="scripts/ncds-data/LatLong.js"></script>
+
+        <!--- main JS file, containing code to process the data and generate graphical elements -->
+        <script src="scripts/ncds-data/prototypencds.js"></script>
+    </body>
+</html>
