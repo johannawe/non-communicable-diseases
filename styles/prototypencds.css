@@ -17,8 +17,8 @@ html {
     font-size: 14px;
     line-height: 1.4;
     background: #111;
-    font-family: 'Nunito Sans', sans-serif;
-    color: #9f9faf;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #e1e1e5;
 }
 
 ::-moz-selection {
@@ -30,7 +30,14 @@ html {
     background: #b3d4fc;
     text-shadow: none;
 }
-
+a{
+    color: inherit;
+}
+#credits{
+    position: absolute;
+    bottom: 00px;
+    left: 20px;
+}
 body{
     cursor: auto;
     overflow: hidden;
@@ -105,31 +112,28 @@ div.name{
     color: #7f7f8f;
     text-align: left;
     font-size: 14px;
-    font-family: 'Nunito Sans';
     font-weight: 400;
     display: none;
     opacity: 0.9;
 }
 
 h1{
-    font-family: 'Nunito Sans';
-    font-weight: 600;
-    font-size: 12px;
+    font-weight: 400;
+    font-size: 14px;
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 80px;
     -webkit-user-select: none;  
     -moz-user-select: none;    
     -ms-user-select: none;      
     user-select: none;
 }
 #info{
-    padding: 6px 9px;
     box-shadow: none;
     font-size: 12px;
     position: absolute;
     top: 24px;
-    left: 260px;
+    left: 24px;
     z-index: 10;
     cursor: pointer;
     -webkit-user-select: none;  
@@ -145,56 +149,127 @@ button:hover{
 }
 
 button{
-    font-family: 'Nunito Sans', sans-serif;
-    padding: 6px 9px; 
-    text-align: center;
-    text-align: center;
-    font-weight: 400;
-    font-size: 1rem;
     border-radius: 2px;
-    border: none;
     display: block;
     margin: 0 auto !important;
-    width: 90px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
     color: #9f9faf;
     border: solid 1px #313136;
     background: none;
     transition: all 0.2s;
+}
+
+#information h2{
+    font-size: 18px;
+    max-width: 280px;
+    font-weight: 500;
+}
+
+#information h3{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-top: 24px;
 
 }
 
-#InteractionPopUp{
-    background-color: rgba(20,20,20,0.99);
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    top: 25%;
-    width: 300px;
-    padding: 30px;
-    border-radius: 5px;
-    border: solid 0.5px #000;
-    box-shadow: 0px 0px 65px #000;
-    z-index: 20;
-    display: none;
+#information p{
+    color: #aaa;
+    max-width: 280px;
 }
 
-#InteractionPopUp p{
-    padding-top: 14px;
-    padding-bottom: 30px;
-    padding-left: 20px; 
+#information p b{
+    text-transform: uppercase;
+    font-weight: 500;
 }
 /*#InteractionPopUp p:last-child{
     padding-bottom: 0px;
 }*/
+#information{
+    position: absolute;
+    background-color: rgba(20,20,20,0.99);
+    box-shadow: 0px 0px 65px #000;
+    width: 350px;
+    padding: 24px;
+    padding-top: 19px;
+    bottom:0;
+    z-index: 100;
+    top:0;
+    left: 0;
+    transition: left .4s ease;
+    border-right: solid 0.5px #000;
+}
 
-#InteractionPopUp div{
+#information .close{
+    position: absolute;
+    border-radius: 2px;
+    right: 24px;
+    cursor: pointer;
+    top: 24px;
+    display: block;
+    margin: 0 auto !important;
+    width: 30px;
+    height: 30px;
+    color: #9f9faf;
+    border: solid 1px #313136;
+    background: none;
+    transition: all 0.2s;
+}
+
+#information .close svg.arrow{
+    padding-top: 7px;
+    padding-left: 8px;
+}
+
+button svg.arrow{
+    padding-left: 2px;
+}
+
+button:hover > svg.arrow path{
+    stroke: #111;
+    transition: all 0.2s;
+}
+
+svg.arrow path{
+    transition: all 0.2s;
+    stroke: #9f9faf;
+}
+
+#information .close:hover > svg.arrow path{
+    stroke: #111;
+    transition: all 0.2s;
+}
+
+#information .close:hover{
+    background: #cfcfdf/*rgba(40,40,46,0.5)*/;
+    color: #111;
+}     
+.manual{
+    padding-top: 24px;
+}
+
+.manual p{
+    padding-top: 14px;
+    padding-bottom: 28px;
+}
+
+#information div{
     float: left;
 }
 
-#InteractionPopUp div img{
+#information div img{
+    padding-top: 8px;
     height: 350px;
 }
+
+.hidden-information{
+    left: -400px !important;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0) !important;
+    transition: left .4s ease, box-shadow .6s ease;
+}
+
 /*.invisible{
     opacity: 0;
 }

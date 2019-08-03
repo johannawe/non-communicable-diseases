@@ -1,17 +1,17 @@
 //Do not start until jquery and our DOM is ready...
 $( document ).ready(function() {
-
+	$("#information .close").on("click", function(e){
+		console.log("hi")
+		$("#information").addClass("hidden-information")
+	})
 	init();
 });
 
 	//PopUp for Help
-	function openPopUp() {
-		$("#InteractionPopUp").fadeIn(320);
+	function openSidebar() {
+		$("#information").removeClass("hidden-information")
 	}
 
-	function closePopUp() {
-		$("#InteractionPopUp").fadeOut(350);
-	}
 
 	function init(){
 		//Farbtests

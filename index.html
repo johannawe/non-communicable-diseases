@@ -29,20 +29,37 @@
         <![endif]-->
     </head>
     <body>
-        <h1>Deaths by non communicable diseases<br> in every 100 000 people in 2012.</h1>
-        <button id="info" onclick="openPopUp()">I'm lost!</button>
-        <div id="InteractionPopUp">
+        <div id="information" class="">
+            <div class="close"><svg class="arrow"  width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.00066 1.00049L2.00098 8.00018L9.00066 14.9999" stroke="black" stroke-width="1"/>
+                    </svg>
+</div>
+             <h2>Deaths by non communicable diseases in every 100 000 people in 2012.</h2>
+
+            <h3>About this project</h3>
+            <p>This was an experimental students project created as part of the Interaction Design Studies at HfG Schwäbisch Gmünd.</p>
+            <p>The initial objective of the visualisation was to develop an interaction and visual system that would work without the use of text or icons, displaying multiple levels of information.<br></p>
+            <h3>Navigation Patterns</h3>
+            <p>The visualisation uses the metaphor of going »deeper« into the information, by clicking on the background to advance. The selection mechanisms are the common »selection-by-click« with selection by drawing around objects.</p>
             <div>
                 <img src="img/ncds/interactions-info.png">
             </div>
-            <div>
+            <div class="manual">
                 <p><b>drag around</b> <br>elements to select them.</p>
                 <p><b>click on an element</b> <br>to select or deselect it.</p>
                 <p><b>click on the background</b> <br>to go to a deeper layer.</p>
                 <p><b>double click anywhere</b> <br>to go to the previous layer.</p>
             </div>
-            <button onclick="closePopUp()">Got it!</button>
         </div>
+        <h1>Deaths by non communicable diseases<br> in every 100 000 people in 2012.</h1>
+        <button id="info" onclick="openSidebar()"><svg class="arrow" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.00129 15L8.00098 8.00031L1.00129 1.00062" stroke="black" stroke-width="1"/>
+</svg>
+
+</svg>
+</button>
+       
+        <p id="credits">Project by <a href="http://www.johannawellnitz.de">Johanna Wellnitz</a></div>
         <!--- Loading JQuery, TweenMax, SnapSVG from local JS directory -->
         <script src="scripts/vendor/jquery-1.11.2.min.js"></script>
         <script src="scripts/vendor/TweenMax.js"></script>
