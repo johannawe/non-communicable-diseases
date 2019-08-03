@@ -627,8 +627,13 @@ $( document ).ready(function() {
 				}) 
 			$(window)
 				.on("mousewheel", function(event){
-					event.preventDefault();
-					if(!isAnimating){
+					
+					if(!$("#information").hasClass("information-hidden") && event.pageX < 400){
+						console.log(":) "+event.pageX)
+
+					}else{
+						event.preventDefault();
+						if(!isAnimating){
 						scrolltmp ++;
 						console.log(scrolltmp)
 						if(scrolltmp >50){
@@ -651,7 +656,9 @@ $( document ).ready(function() {
 							}
 							scrolltmp = 0;
 						}	
+					}	
 					}
+				
 					
 				})
 
