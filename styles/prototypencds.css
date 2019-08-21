@@ -102,7 +102,7 @@ textarea {
 div.name{
     background-color: #1a1a1a;
     /*position: absolute;*/
-    padding: 0.9rem;
+    padding: 0.6rem 0.9rem;
     line-height: 1.3rem;
     border-radius: 5px;
     border: solid 0.5px #000;
@@ -110,7 +110,7 @@ div.name{
     /*top: 1rem;*/
     /*left: 1rem;*/
     z-index: 10;
-    color: #7f7f8f;
+    color: #aaaaaf;
     text-align: left;
     font-size: 14px;
     font-weight: 400;
@@ -178,7 +178,7 @@ button{
 }
 
 #information p{
-    color: #aaa;
+    color: #aaaaaf;
     max-width: 280px;
 }
 
@@ -291,8 +291,9 @@ svg.arrow path{
 
 
 
-
-
+.CountryHover{
+ fill: #9999bb;
+}
 
 
 /* ==========================================================================
